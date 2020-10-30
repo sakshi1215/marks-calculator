@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marks calculator</title>
+    <link rel="stylesheet" href="marks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body bgcolor="lightgreen">
+    <div class="box">
+    
+            <span id="place"><h2 id="heading">Your Marks Calculator</h2></span>
+        
+        <span class="forms">
+            <div class="entity">
+                <input type="number" class="element"
+                id="maths" placeholder="Maths">
+            </div>
+            <div class="entity">
+                <input type="text" class="element"
+                id="chemistry" placeholder="chemistry">
+            </div>
+            <div class="entity">
+                <input type="text" class="element" id="physics" placeholder="physics">
+            </div>
+            <div class="entity">
+                <input type="text" class="element"
+                id="english" placeholder="english">
+            </div>
+            <div class="entity">
+                <input type="text" class="element"
+                id="hindi" placeholder="hindi">
+            </div>
+
+            <button type="submit" id="btn" onclick="myfunction()">get marks </button>
+        </span> 
+        <p id="summ">enter marks out of 100</p> 
+       
+
+    </div>
+    
+<script>
+    
+   function myfunction()
+  {
+    var m=document.getElementById("maths").value;
+    var p=document.getElementById("physics").value;
+    var c=document.getElementById("chemistry").value;
+    var e=document.getElementById("english").value;
+    var w=document.getElementById("hindi").value;
+    var result=parseInt(m)+parseInt(p)+parseInt(c)+parseInt(e)+parseInt(w);
+    var perc=(result/500)*100;
+    document.getElementById("summ").innerHTML="total is "+ parseFloat(perc)+"%";
+  }  
+</script>
+</body>
+</html>
